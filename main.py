@@ -3,10 +3,10 @@ import random
 
 app = FastAPI()
 
-@app.get("/")
+@app.get("/helloworld")
 async def read_root():  
-    return {"message": "Hello, World!"} 
+    return {"message": "Hello, World!"}
 
-@app.get("/teste1")
-async def funcao_teste():
-    return {"message": True, "num_aleatorio": random.randint(1, 1000)}
+@app.get("/teste")
+async def funcaoteste():  
+    return {"teste": True, "num_aleatorio": random.randint(1, 1000)}
