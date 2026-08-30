@@ -1,0 +1,23 @@
+name: Continuous Delivery
+on:
+  push:
+    branches: 
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  deliver:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v6
+
+      - name: Simulando Continuous Delivery
+        uses: actions/upload-artifact@v7
+        with:
+          name: projetozipado.zip
+          path: |
+            '**.py'
+            README.md
